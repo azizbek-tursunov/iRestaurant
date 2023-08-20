@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,7 @@ Route::get('/menu', [PageController::class, 'menu'])->name('menu');
 Route::get('/reservation', [PageController::class, 'reservation'])->name('reservation');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 
+// Blog routes
+
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/post/{blog}', [BlogController::class, 'show'])->name('blog.show');

@@ -36,7 +36,7 @@
                             </li>
 
                             <li>
-                                <a href="#">Blog</a>
+                                <a href="{{ route('blog.index') }}">Blog</a>
                             </li>
 
                             <li>
@@ -50,7 +50,7 @@
                 <div class="social flex-w flex-l-m p-r-20">
                     <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram    m-l-21" aria-hidden="true"></i></a>
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                 </div>
