@@ -9,9 +9,5 @@ class SocialLink extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['link'];
-
-    protected $casts = [
-        'link' => 'array',
-    ];
+    protected $fillable = ['name', 'url'];
 }
