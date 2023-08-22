@@ -4,20 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 
-class Blog extends Model
+class Time extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'body',
-        'image',
+        'name',
     ];
 
-    public function shortBody()
+    public function menus()
     {
-        return Str::words(strip_tags($this->body), 25);
+        return $this->hasMany(Menu::class);
     }
 }

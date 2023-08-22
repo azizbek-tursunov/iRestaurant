@@ -13,7 +13,7 @@
 		<!-- Map -->
 		<div class="container">
 			<div class="map bo8 bo-rad-10 of-hidden">
-				<div class="contact-map size37" id="google_map" data-map-x="40.704644" data-map-y="-74.011987" data-pin="images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div>
+				<div class="contact-map size37" id="google_map" data-map-x="40.704644" data-map-y="-74.011987" data-pin="/images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div>
 			</div>
 		</div>
 
@@ -22,7 +22,8 @@
 				Send us a Message
 			</h3>
 
-			<form class="wrap-form-reservation size22 m-l-r-auto">
+			<form class="wrap-form-reservation size22 m-l-r-auto" method="POST">
+				@csrf
 				<div class="row">
 					<div class="col-md-4">
 						<!-- Name -->
@@ -31,7 +32,7 @@
 						</span>
 
 						<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name" required>
 						</div>
 					</div>
 
@@ -62,7 +63,7 @@
 						<span class="txt9">
 							Message
 						</span>
-						<textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" name="message" placeholder="Message"></textarea>
+						<textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" required name="message" placeholder="Message"></textarea>
 					</div>
 				</div>
 
@@ -87,7 +88,7 @@
 							</span>
 
 							<span class="txt23 size38">
-								8th floor, 379 Hudson St, New York, NY 10018
+								Namangan shahar, Uzbekistan
 							</span>
 						</div>
 					</div>

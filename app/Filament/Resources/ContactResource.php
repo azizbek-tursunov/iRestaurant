@@ -51,8 +51,9 @@ class ContactResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('phone')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('phone'),
+                Tables\Columns\TextColumn::make('message')
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -66,7 +67,7 @@ class ContactResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -86,7 +87,6 @@ class ContactResource extends Resource
     {
         return [
             'index' => Pages\ListContacts::route('/'),
-            'edit' => Pages\EditContact::route('/{record}/edit'),
         ];
     }
 

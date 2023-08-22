@@ -36,15 +36,19 @@ class MenuResource extends Resource
                         ->required()
                         ->numeric()
                         ->prefix('$'),
-                    Forms\Components\Select::make('categories')
-                        ->relationship('categories', 'name')
-                        ->required(),
                 ])->columnSpan(8),
+
                 Forms\Components\Card::make([
                     Forms\Components\FileUpload::make('image')
                         ->image()
                         ->required(),
+                    Forms\Components\Select::make('categories')
+                        ->relationship('categories', 'name')
+                        ->required(),
+                    Forms\Components\Select::make('time')
+                        ->relationship('time', 'name'),
                 ])->columnSpan(4)
+
             ])->columns(12);
     }
 
@@ -56,6 +60,7 @@ class MenuResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('about')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
                     ->money()

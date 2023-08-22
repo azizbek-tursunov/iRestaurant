@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +30,11 @@ Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/post/{blog}', [BlogController::class, 'show'])->name('blog.show');
+
+// Reservation routes
+
+Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation.store');
+
+// Contact routes
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

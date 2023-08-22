@@ -10,6 +10,7 @@ class Menu extends Model
     use HasFactory;
 
     protected $fillable = [
+        'time_id',
         'name',
         'about',
         'price',
@@ -19,5 +20,10 @@ class Menu extends Model
     public function categories()
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function time()
+    {
+        return $this->belongsTo(Time::class);
     }
 }

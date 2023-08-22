@@ -9,11 +9,13 @@ class BlogController extends Controller
 {
     public function index()
     {
-        return view('blog.index');
+        $posts = Blog::all();
+
+        return view('blog.index', compact('posts'));
     }
 
     public function show(Blog $blog)
     {
-        return view('blog.show', ['blog' => $blog]);
+        return view('blog.show', compact('blog'));
     }
 }

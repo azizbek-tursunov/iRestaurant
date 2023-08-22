@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chef;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -14,7 +15,9 @@ class PageController extends Controller
 
     public function about()
     {
-        return view('about');
+        $chefs = Chef::all();
+
+        return view('about', compact('chefs'));
     }
 
     

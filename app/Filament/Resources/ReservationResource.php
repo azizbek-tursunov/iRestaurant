@@ -40,7 +40,6 @@ class ReservationResource extends Resource
                         ->required()
                         ->numeric(),
                     Forms\Components\TextInput::make('phone')
-                        ->tel()
                         ->required()
                         ->maxLength(255),
                     Forms\Components\Toggle::make('isProvided')
