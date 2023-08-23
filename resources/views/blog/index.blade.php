@@ -64,7 +64,7 @@
                                     </div>
 
                                     <p>
-                                        {!! $post->shortBody() !!} 
+                                        {!! $post->shortBody() !!}
                                     </p>
 
                                     <a href="{{ route('blog.show', ['blog' => $post->id]) }}" class="dis-block txt4 m-t-30">
@@ -73,14 +73,11 @@
                                     </a>
                                 </div>
                             </div>
-
                         @endforeach
-                        
+
                         <!-- Pagination -->
-                        <div class="pagination flex-l-m flex-w m-l--6 p-t-25">
-                            <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-                            <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
-                        </div>
+                        {{ $posts->links() }}
+
                     </div>
                 </div>
 
@@ -91,33 +88,6 @@
                             <input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="search"
                                    placeholder="Search">
                             <button class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
-                        </div>
-
-                        <!-- Most Popular -->
-                        <div class="popular">
-                            <h4 class="txt33 p-b-35 p-t-58">
-                                Most popular
-                            </h4>
-
-                            <ul>
-                                <li class="flex-w m-b-25">
-                                    <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                        <a href="#">
-                                            <img src="images/blog-11.jpg" alt="IMG-BLOG">
-                                        </a>
-                                    </div>
-
-                                    <div class="size28">
-                                        <a href="#" class="dis-block txt28 m-b-8">
-                                            Best Places for Wine
-                                        </a>
-
-                                        <span class="txt14">
-											3 days ago
-										</span>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
 
                     </div>
