@@ -34,9 +34,8 @@ class GalleryResource extends Resource
                         'interior' => 'Interior',
                         'food' => 'Food',
                         'events' => 'Events',
-                        'vip guests' => 'VIP Guests',
-                    ])
-                    ->required(),
+                        'guests' => 'VIP Guests',
+                    ]),
             ]);
     }
 

@@ -42,8 +42,8 @@ class MenuResource extends Resource
                     Forms\Components\FileUpload::make('image')
                         ->image()
                         ->required(),
-                    Forms\Components\Select::make('categories')
-                        ->relationship('categories', 'name')
+                    Forms\Components\Select::make('category')
+                        ->relationship('category', 'name')
                         ->required(),
                     Forms\Components\Select::make('time')
                         ->relationship('time', 'name'),

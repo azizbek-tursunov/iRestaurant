@@ -14,12 +14,11 @@ class MenusSeeder extends Seeder
     public function run(): void
     {
         $menu = Menu::create([
+            'category_id' => rand(1, 4),
             'name' => fake()->name(),
             'about' => fake()->paragraph(),
             'price' => fake()->numberBetween(100000, 500000),
             'image' => 'https://source.unsplash.com/random/200x200?sig=1',
         ]);
-
-        $menu->categories()->attach(1);
     }
 }
