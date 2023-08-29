@@ -12,40 +12,41 @@
                 </div>
 
                 <!-- Menu -->
-                <div class="wrap_menu p-l-45 p-l-0-xl">
+                <div class="wrap_menu  p-l-45 p-l-0-xl">
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="{{ route('home') }}">Home</a>
+                                <a href="{{ route('home') }}">{{ __('layout.home') }}</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('menu') }}">Menu</a>
+                                <a href="{{ route('menu') }}">{{ __('layout.menu') }}</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('reservation') }}">Reservation</a>
+                                <a href="{{ route('reservation') }}">{{ __('layout.reservation') }}</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('gallery') }}">Gallery</a>
+                                <a href="{{ route('gallery') }}">{{ __('layout.gallery') }}</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('about') }}">About</a>
+                                <a href="{{ route('about') }}">{{ __('layout.about') }}</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('blog.index') }}">Blog</a>
+                                <a href="{{ route('blog.index') }}">{{ __('layout.blog') }}</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('contact') }}">Contact</a>
+                                <a href="{{ route('contact') }}">{{ __('layout.contact') }}</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
 
+{{--                TODO: Add global varriables --}}
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
                     <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>

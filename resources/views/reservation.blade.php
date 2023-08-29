@@ -1,8 +1,11 @@
 <x-layout>
+    <x-slot:title>
+        {{ __('home.reservation') }}
+    </x-slot:title>
     	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/bg-title-page-02.jpg);">
 		<h2 class="tit6 t-center">
-			Reservation
+			{{ __('home.reservation') }}
 		</h2>
 	</section>
 
@@ -14,11 +17,11 @@
 				<div class="col-lg-12 p-b-30">
 					<div class="t-center">
 						<span class="tit2 t-center">
-							Reservation
+							{{ __('home.reservation') }}
 						</span>
 
 						<h3 class="tit3 t-center m-b-35 m-t-2">
-							Book table
+							{{ __('home.book_table') }}
 						</h3>
 					</div>
 
@@ -27,7 +30,7 @@
 							<div class="col-md-4">
 								<!-- Date -->
 								<span class="txt9">
-									Date
+									{{ __('home.date') }}
 								</span>
 
 								<div class="wrap-inputdate pos-relative txt10 size12 bo2 bo-rad-10 m-t-3 m-b-23">
@@ -39,7 +42,7 @@
 							<div class="col-md-4">
 								<!-- Time -->
 								<span class="txt9">
-									Time
+									{{ __('home.time') }}
 								</span>
 
 								<div class="wrap-inputtime size12 bo2 bo-rad-10 m-t-3 m-b-23">
@@ -71,25 +74,17 @@
 							<div class="col-md-4">
 								<!-- People -->
 								<span class="txt9">
-									People
+									{{ __('home.guests') }}
 								</span>
 
 								<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
 									<!-- Select2 -->
-									<select class="selection-1" name="people">
-										<option>1 person</option>
-										<option>2 people</option>
-										<option>3 people</option>
-										<option>4 people</option>
-										<option>5 people</option>
-										<option>6 people</option>
-										<option>7 people</option>
-										<option>8 people</option>
-										<option>9 people</option>
-										<option>10 people</option>
-										<option>11 people</option>
-										<option>12 people</option>
-									</select>
+									<select class="selection-1" name="guests">
+                                        <option value="1">1 {{ __('home.guest') }}</option>
+                                        @for($i=2; $i<= 12; $i++)
+                                            <option value="{{ $i }}">{{ $i }} {{ __('home.guests') }}</option>
+                                        @endfor
+                                    </select>
 								</div>
 							</div>
 						</div>
@@ -98,33 +93,22 @@
 							<div class="col-md-4">
 								<!-- Name -->
 								<span class="txt9">
-									Name
+									{{ __('home.name') }}
 								</span>
 
 								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="{{ __('home.name') }}">
 								</div>
 							</div>
 
 							<div class="col-md-4">
 								<!-- Phone -->
 								<span class="txt9">
-									Phone
+									{{ __('home.phone') }}
 								</span>
 
 								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone">
-								</div>
-							</div>
-
-							<div class="col-md-4">
-								<!-- Email -->
-								<span class="txt9">
-									Email
-								</span>
-
-								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="{{ __('home.phone') }}">
 								</div>
 							</div>
 
@@ -133,7 +117,7 @@
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
 							<button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4">
-								Book Table
+								{{ __('home.book_table') }}
 							</button>
 						</div>
 					</form>
@@ -143,28 +127,12 @@
 			<div class="info-reservation flex-w p-t-80">
 				<div class="size23 w-full-md p-t-40 p-r-30 p-r-0-md">
 					<h4 class="txt5 m-b-18">
-						Reserve by Phone
+						{{ __('reservation.byPhone') }}
 					</h4>
 
 					<p class="size25">
-						Donec quis euismod purus. Donec feugiat ligula rhoncus, varius nisl sed, tincidunt lectus.
-						<span class="txt25">Nulla vulputate</span>
-						, lectus vel volutpat efficitur, orci
-						<span class="txt25">lacus sodales</span>
-						 sem, sit amet quam:
-						<span class="txt24">(001) 345 6889</span>
-					</p>
-				</div>
-
-				<div class="size24 w-full-md p-t-40">
-					<h4 class="txt5 m-b-18">
-						For Event Booking
-					</h4>
-
-					<p class="size26">
-						Donec feugiat ligula rhoncus:
-						<span class="txt24">(001) 345 6889</span>
-						, varius nisl sed, tinci-dunt lectus sodales sem.
+						{{ __("reservation.byPhone_text") }}
+						<span class="txt24">55 500 08 00</span>
 					</p>
 				</div>
 

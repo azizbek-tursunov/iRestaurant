@@ -1,8 +1,11 @@
 <x-layout>
-q	<!-- Title Page -->
+    <x-slot:title>
+        {{ __('about_us.about_us') }}
+    </x-slot:title>
+	<!-- Title Page -->
 <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/bg-title-page-03.jpg);">
     <h2 class="tit6 t-center">
-        About Us
+        {{ __('about_us.about_us') }}
     </h2>
 </section>
 
@@ -10,15 +13,15 @@ q	<!-- Title Page -->
 <!-- Our Story -->
 <section class="bg2-pattern p-t-116 p-b-110 t-center p-l-15 p-r-15">
     <span class="tit2 t-center">
-        Italian Restaurant
+        {{ __('home.turkish_restaurant') }}
     </span>
 
     <h3 class="tit3 t-center m-b-35 m-t-5">
-        Our Story
+        {{ __('home.our_story') }}
     </h3>
 
     <p class="t-center size32 m-l-r-auto">
-        Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam purus purus, lacinia a scelerisque in, luctus vel felis. Donec odio diam, dignissim a efficitur at, efficitur et est. Pellentesque semper est ut pulvinar ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et leo accumsan, egestas velit ac, fringilla tortor. Sed varius justo sed luctus mattis.
+        {{ __('about_us.about_us_text') }}
     </p>
 </section>
 
@@ -27,11 +30,11 @@ q	<!-- Title Page -->
 <section class="section-video parallax100" style="background-image: url(images/header-menu-01.jpg);">
     <div class="content-video t-center p-t-225 p-b-250">
         <span class="tit2 p-l-15 p-r-15">
-            Discover
+            {{ __('home.discover') }}
         </span>
 
         <h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
-            Our Video
+            {{ __('home.our_video') }}
         </h3>
 
         <div class="btn-play ab-center size16 hov-pointer m-l-r-auto m-t-43 m-b-33" data-toggle="modal" data-target="#modal-video-01">
@@ -51,15 +54,15 @@ q	<!-- Title Page -->
             <div class="col-md-6 p-t-45 p-b-30">
                 <div class="wrap-text-delicious t-center">
                     <span class="tit2 t-center">
-                        Delicious
+                        {{ __('about_us.delicious') }}
                     </span>
 
                     <h3 class="tit3 t-center m-b-35 m-t-5">
-                        RECIPES
+                        {{ __('about_us.recipes') }}
                     </h3>
 
                     <p class="t-center m-b-22 size3 m-l-r-auto">
-                        Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+                        {{ __('about_us.recipes_text') }}
                     </p>
                 </div>
             </div>
@@ -83,11 +86,11 @@ q	<!-- Title Page -->
             <div class="col-md-6 p-t-45 p-b-30">
                 <div class="wrap-text-romantic t-center">
                     <span class="tit2 t-center">
-                        Romantic
+                        {{ __('about_us.romantic') }}
                     </span>
 
                     <h3 class="tit3 t-center m-b-35 m-t-5">
-                        Restaurant
+                        {{ __('about_us.restaurant') }}
                     </h3>
 
                     <p class="t-center m-b-22 size3 m-l-r-auto">
@@ -110,11 +113,11 @@ q	<!-- Title Page -->
 <section class="section-chef bgwhite p-t-115 p-b-95">
     <div class="container t-center">
         <span class="tit2 t-center">
-            Meet Our
+            {{ __('about_us.our') }}
         </span>
 
         <h3 class="tit5 t-center m-b-50 m-t-5">
-            Chef
+            {{ __('about_us.team') }}
         </h3>
 
         <div class="row">

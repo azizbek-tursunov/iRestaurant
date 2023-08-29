@@ -1,9 +1,12 @@
 <x-layout>
+    <x-slot:title>
+        {{ __('blog.blog') }}
+    </x-slot:title>
     <!-- Title Page -->
     <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
              style="background-image: url(images/bg-title-page-03.jpg);">
         <h2 class="tit6 t-center">
-            Blog
+            {{ __('blog.blog') }}
         </h2>
     </section>
 
@@ -13,13 +16,13 @@
         <div class="bread-crumb bo5-b p-t-17 p-b-17">
             <div class="container">
                 <a href="{{ route('home') }}" class="txt27">
-                    Home
+                    {{ __('layout.home') }}
                 </a>
 
                 <span class="txt29 m-l-10 m-r-10">/</span>
 
                 <span class="txt29">
-					Blog
+					{{ __('blog.blog') }}
 				</span>
             </div>
         </div>
@@ -32,7 +35,7 @@
                             <!-- Block4 -->
                             <div class="blo4 p-b-63">
                                 <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-                                    <a href="blog-detail.html">
+                                    <a href="{{ route('blog.show', ['blog' => $post->id]) }}">
                                         <img src="/storage/{{ $post->image }}" alt="IMG-BLOG">
                                     </a>
                                     @php
@@ -53,7 +56,8 @@
 
                                 <div class="text-blo4 p-t-33">
                                     <h4 class="p-b-16">
-                                        <a href="blog-detail.html" class="tit9">{{ $post->title }}</a>
+                                        <a href="{{ route('blog.show', ['blog' => $post->id]) }}"
+                                           class="tit9">{{ $post->title }}</a>
                                     </h4>
 
                                     <div class="txt32 flex-w p-b-24">
@@ -67,8 +71,9 @@
                                         {!! $post->shortBody() !!}
                                     </p>
 
-                                    <a href="{{ route('blog.show', ['blog' => $post->id]) }}" class="dis-block txt4 m-t-30">
-                                        Continue Reading
+                                    <a href="{{ route('blog.show', ['blog' => $post->id]) }}"
+                                       class="dis-block txt4 m-t-30">
+                                        {{ __('blog.continue_reading') }}
                                         <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -86,7 +91,7 @@
                         <!-- Search -->
                         <div class="search-sidebar2 size12 bo2 pos-relative">
                             <input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="search"
-                                   placeholder="Search">
+                                   placeholder="{{ __('blog.search') }}">
                             <button class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
                         </div>
 

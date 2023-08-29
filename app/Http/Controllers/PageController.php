@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Chef;
 use App\Models\Gallery;
@@ -12,7 +13,9 @@ class PageController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $posts =  Blog::latest()->limit(3)->get();
+
+        return view('home', compact('posts'));
     }
 
 
@@ -41,9 +44,6 @@ class PageController extends Controller
     public function menu()
     {
         $categoriesWithMeals = Category::with('menus')->get();
-
-
-        $breakfastMeals = Menu::where('time_id', '=', 1)->limit(6)->get();
         $lunchMeals = Menu::where('time_id', '=', 2)->limit(6)->get();
         $dinnerMeals = Menu::where('time_id', '=', 3)->limit(6)->get();
 
