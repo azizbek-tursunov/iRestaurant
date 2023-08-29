@@ -17,9 +17,10 @@ class SocialLinkResource extends Resource
 {
     protected static ?string $model = SocialLink::class;
 
+    protected static ?string $label = 'Социальные сети';
     protected static ?string $navigationIcon = 'heroicon-o-globe-alt';
 
-    protected static ?string $navigationGroup = 'Website';
+    protected static ?string $navigationGroup = 'Веб-сайт';
 
 
     public static function form(Form $form): Form
@@ -27,6 +28,7 @@ class SocialLinkResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Select::make('name')
+                    ->label("Название")
                     ->options([
                         'facebook-f' => 'Facebook',
                         'twitter' => 'Twitter',
@@ -37,6 +39,7 @@ class SocialLinkResource extends Resource
                     ])
                     ->required(),
                 Forms\Components\TextInput::make('url')
+                    ->label("Ссылка")
                     ->required()
                     ->maxLength(255),
             ]);
@@ -47,14 +50,18 @@ class SocialLinkResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Название")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('url')
+                    ->label("Ссылка")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Дата создания")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label("Дата обновления")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

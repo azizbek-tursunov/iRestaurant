@@ -17,9 +17,10 @@ class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
 
+    protected static ?string $label = 'Блог';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Website';
+    protected static ?string $navigationGroup = 'Веб-сайт';
 
 
     public static function form(Form $form): Form
@@ -29,14 +30,17 @@ class BlogResource extends Resource
                 Forms\Components\Card::make([
                     Forms\Components\TextInput::make('title')
                         ->required()
+                        ->label("Заголовок")
                         ->maxLength(255),
                     Forms\Components\RichEditor::make('body')
+                        ->label("Текст")
                         ->required()
                         ->maxLength(65535)
                         ->columnSpanFull(),
                 ])->columnSpan(8),
                 Forms\Components\Card::make([
                     Forms\Components\FileUpload::make('image')
+                        ->label("Изображение")
                         ->image()
                         ->required(),
                 ])->columnSpan(4)
@@ -47,14 +51,18 @@ class BlogResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')
+                ->label("Изображение"),
                 Tables\Columns\TextColumn::make('title')
+                    ->label("Заголовок")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Дата создания")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label("Дата обновления")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

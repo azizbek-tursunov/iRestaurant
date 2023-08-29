@@ -17,9 +17,10 @@ class MenuResource extends Resource
 {
     protected static ?string $model = Menu::class;
 
+    protected static ?string $label = 'Меню';
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
-    protected static ?string $navigationGroup = 'Kitchen';
+    protected static ?string $navigationGroup = 'Кухня';
 
     public static function form(Form $form): Form
     {
@@ -27,12 +28,23 @@ class MenuResource extends Resource
             ->schema([
                 Forms\Components\Card::make([
                     Forms\Components\TextInput::make('name')
+                        ->label("Название")
                         ->required()
                         ->maxLength(255),
                     Forms\Components\Textarea::make('about')
+                        ->label("Описание")
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('name_ru')
+                        ->label("Название (RU)")
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\Textarea::make('about_ru')
+                        ->label("Описание (RU)")
                         ->required()
                         ->maxLength(255),
                     Forms\Components\TextInput::make('price')
+                        ->label("Цена")
                         ->required()
                         ->numeric()
                         ->prefix('$'),
@@ -40,12 +52,15 @@ class MenuResource extends Resource
 
                 Forms\Components\Card::make([
                     Forms\Components\FileUpload::make('image')
+                        ->label("Изображение")
                         ->image()
                         ->required(),
                     Forms\Components\Select::make('category')
+                        ->label("Категория")
                         ->relationship('category', 'name')
                         ->required(),
                     Forms\Components\Select::make('time')
+                        ->label("Время приема")
                         ->relationship('time', 'name'),
                 ])->columnSpan(4)
 
@@ -56,22 +71,29 @@ class MenuResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')
+                ->label("Изображение"),
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Название")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('about')
+                    ->label("Описание")
                     ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
+                    ->label("Цена")
                     ->money()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('categories.name')
+                    ->label("Категория")
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Дата создания")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label("Дата обновления")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

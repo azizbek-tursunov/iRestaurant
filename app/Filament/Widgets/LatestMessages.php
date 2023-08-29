@@ -18,10 +18,13 @@ class LatestMessages extends BaseWidget
                     ->limit(5),
             )
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('name')
+                    ->label("Имя"),
                 Tables\Columns\TextColumn::make('message')
-                ->wrap(),
+                    ->label("Сообщение")
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Дата создания")
                     ->dateTime()
             ]);
     }

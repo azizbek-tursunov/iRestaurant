@@ -17,9 +17,10 @@ class GalleryResource extends Resource
 {
     protected static ?string $model = Gallery::class;
 
+    protected static ?string $label = 'Галерея';
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
-    protected static ?string $navigationGroup = 'Website';
+    protected static ?string $navigationGroup = 'Веб-сайт';
 
 
     public static function form(Form $form): Form
@@ -27,9 +28,11 @@ class GalleryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('image')
+                    ->label("Изображение")
                     ->image()
                     ->required(),
                 Forms\Components\Select::make('category')
+                    ->label("Категория")
                     ->options([
                         'interior' => 'Interior',
                         'food' => 'Food',
@@ -43,14 +46,19 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')
+                ->label("Изображение"),
+//                TODO: shu ustunnu berkitib qo'yish kerak
                 Tables\Columns\TextColumn::make('category')
+                    ->label("Категория")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Дата создания")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label("Дата обновления")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -79,3 +87,4 @@ class GalleryResource extends Resource
         ];
     }
 }
+// TODO: Hamma labellarni tarjimali qilish kerak

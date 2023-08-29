@@ -19,12 +19,17 @@ class LatestResevations extends BaseWidget
             )
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->label('Name'),
-                Tables\Columns\TextColumn::make('phone'),
-                Tables\Columns\TextColumn::make('guests'),
-                Tables\Columns\TextColumn::make('date'),
-                Tables\Columns\TextColumn::make('time'),
+                    ->label('Имя'),
+                Tables\Columns\TextColumn::make('phone')
+                    ->label('Телефон'),
+                Tables\Columns\TextColumn::make('guests')
+                    ->label('Количество гостей'),
+                Tables\Columns\TextColumn::make('date')
+                    ->label('Дата'),
+                Tables\Columns\TextColumn::make('time')
+                    ->label('Время'),
                 Tables\Columns\IconColumn::make('isProvided')
+                    ->label('Предоставлен')
                     ->boolean(),
             ]);
     }

@@ -17,9 +17,12 @@ class ReservationResource extends Resource
 {
     protected static ?string $model = Reservation::class;
 
+
+    protected static ?string $label = 'Бронирование';
+
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static ?string $navigationGroup = 'Customers';
+    protected static ?string $navigationGroup = 'Клиенты';
 
 
     public static function form(Form $form): Form
@@ -28,21 +31,27 @@ class ReservationResource extends Resource
             ->schema([
                 Forms\Components\Card::make([
                     Forms\Components\TextInput::make('name')
+                        ->label("Имя")
                         ->required()
                         ->maxLength(255),
                     Forms\Components\DatePicker::make('date')
+                        ->label("Дата")
                         ->required(),
                     Forms\Components\TimePicker::make('time')
+                        ->label("Время")
                         ->seconds(false)
                         ->timezone('Asia/Tashkent')
                         ->required(),
                     Forms\Components\TextInput::make('guests')
+                        ->label("Количество гостей")
                         ->required()
                         ->numeric(),
                     Forms\Components\TextInput::make('phone')
+                        ->label("Телефон")
                         ->required()
                         ->maxLength(255),
                     Forms\Components\Toggle::make('isProvided')
+                        ->label("Предоставлен")
                         ->required(),
                 ]),
 
