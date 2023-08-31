@@ -14,19 +14,43 @@ class CategoriesSeeder extends Seeder
     public function run(): void
     {
         Category::create([
-            'name' => 'Disert',
+            'name' => '🍳Завтрак / Kahvaltı',
         ]);
 
         Category::create([
-            'name' => 'Main',
+            'name' => '🥗Салат / Salata',
         ]);
 
         Category::create([
-            'name' => 'Starter',
+            'name' => '🍟Гарнир / Garnitür',
         ]);
 
         Category::create([
-            'name' => 'Drink',
+            'name' => '🍜Супы / Çorbalar',
+        ]);
+
+        Category::create([
+            'name' => '🍛Вторые блюда из мяса / Et yemekleri',
+        ]);
+
+        Category::create([
+            'name' => '🍢Турецкие шашлыки / Kebaplar',
+        ]);
+
+        Category::create([
+            'name' => '🥩 Стейк / Biftek',
+        ]);
+
+        Category::create([
+            'name' => '🍕Пиццы, Пиде / Pizza, Pide',
+        ]);
+
+        Category::create([
+            'name' => '🍞Хлеб / Ekmek',
+        ]);
+
+        Category::create([
+            'name' => '🍰Десерт / Tatlılar',
         ]);
     }
 }

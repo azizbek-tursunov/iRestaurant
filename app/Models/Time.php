@@ -11,6 +11,8 @@ class Time extends Model
 
     protected $fillable = [
         'name',
+        'name_ru',
+        'name_uz',
     ];
 
     public function menus()

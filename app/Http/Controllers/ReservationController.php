@@ -9,6 +9,14 @@ class ReservationController extends Controller
 {
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => ['required', 'min:3', 'max:255'],
+            'phone' => ['required'],
+            'guests' => ['required'],
+            'date' => ['required'],
+            'time' => ['required'],
+        ]);
+
          Reservation::create([
             'name' => $request->name,
             'phone' => $request->phone,

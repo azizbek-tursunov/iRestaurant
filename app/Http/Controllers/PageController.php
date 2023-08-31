@@ -43,7 +43,7 @@ class PageController extends Controller
 
     public function menu()
     {
-        $categoriesWithMeals = Category::with('menus')->get();
+        $categoriesWithMeals = Category::has('menus')->get();
         $lunchMeals = Menu::where('time_id', '=', 2)->limit(6)->get();
         $dinnerMeals = Menu::where('time_id', '=', 3)->limit(6)->get();
 

@@ -14,6 +14,8 @@ class Menu extends Model
         'time_id',
         'name',
         'about',
+        'name_ru',
+        'about_ru',
         'price',
         'image',
     ];

@@ -108,7 +108,7 @@
         <div class="wrap-video-mo-01">
             <div class="w-full wrap-pic-w op-0-0"><img src="/images/icons/video-16-9.jpg" alt="IMG"></div>
             <div class="video-mo-01">
-                <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YuWR4VCMDxw?si=t_fMgVwsvWemOt0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>

@@ -34,10 +34,10 @@ class GalleryResource extends Resource
                 Forms\Components\Select::make('category')
                     ->label("Категория")
                     ->options([
-                        'interior' => 'Interior',
-                        'food' => 'Food',
-                        'events' => 'Events',
-                        'guests' => 'VIP Guests',
+                        'interior' => 'Интерьер',
+                        'food' => 'Еда',
+                        'events' => 'События',
+                        'guests' => 'Гости',
                     ]),
             ]);
     }
@@ -47,11 +47,8 @@ class GalleryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('image')
-                ->label("Изображение"),
-//                TODO: shu ustunnu berkitib qo'yish kerak
-                Tables\Columns\TextColumn::make('category')
-                    ->label("Категория")
-                    ->searchable(),
+                    ->size('300px')
+                    ->label("Изображение"),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label("Дата создания")
                     ->dateTime()
@@ -87,4 +84,3 @@ class GalleryResource extends Resource
         ];
     }
 }
-// TODO: Hamma labellarni tarjimali qilish kerak

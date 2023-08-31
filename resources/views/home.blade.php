@@ -205,9 +205,9 @@
                                 <img src="images/our-menu-01.jpg" alt="IMG-MENU">
 
                                 <!-- Button2 -->
-                                <a href="#" class="btn2 flex-c-m txt5 ab-c-m size4">
+                                <button class="btn2 flex-c-m txt5 ab-c-m size4">
                                     {{ __('home.lunch') }}
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -217,9 +217,9 @@
                                 <img src="images/our-menu-05.jpg" alt="IMG-MENU">
 
                                 <!-- Button2 -->
-                                <a href="#" class="btn2 flex-c-m txt5 ab-c-m size6">
+                                <button class="btn2 flex-c-m txt5 ab-c-m size6">
                                     {{ __('home.dinner') }}
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -229,9 +229,9 @@
                                 <img src="images/our-menu-13.jpg" alt="IMG-MENU">
 
                                 <!-- Button2 -->
-                                <a href="#" class="btn2 flex-c-m txt5 ab-c-m size30">
+                                <button class="btn2 flex-c-m txt5 ab-c-m size30">
                                     {{ __('home.happy_hour') }}
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -245,9 +245,9 @@
                                 <img src="images/our-menu-08.jpg" alt="IMG-MENU">
 
                                 <!-- Button2 -->
-                                <a href="#" class="btn2 flex-c-m txt5 ab-c-m size6">
+                                <button class="btn2 flex-c-m txt5 ab-c-m size6">
                                     {{ __('home.drinks') }}
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -257,9 +257,9 @@
                                 <img src="images/our-menu-10.jpg" alt="IMG-MENU">
 
                                 <!-- Button2 -->
-                                <a href="#" class="btn2 flex-c-m txt5 ab-c-m size8">
+                                <button class="btn2 flex-c-m txt5 ab-c-m size8">
                                     {{ __('home.starters') }}
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -269,9 +269,9 @@
                                 <img src="images/our-menu-16.jpg" alt="IMG-MENU">
 
                                 <!-- Button2 -->
-                                <a href="#" class="btn2 flex-c-m txt5 ab-c-m size9">
+                                <button class="btn2 flex-c-m txt5 ab-c-m size9">
                                     {{ __('home.desserts') }}
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -357,7 +357,6 @@
                                     </select>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <!-- Name -->
                                 <span class="txt9">
@@ -365,7 +364,7 @@
 									</span>
 
                                 <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                                    <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name"
+                                    <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" required
                                            placeholder="{{ __('home.name') }}">
                                 </div>
 
@@ -375,7 +374,7 @@
 									</span>
 
                                 <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                                    <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone"
+                                    <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" required
                                            placeholder="{{ __('home.phone') }}">
                                 </div>
                             </div>
@@ -399,123 +398,6 @@
         </div>
     </section>
 
-    {{--    <!-- Review -->--}}
-    {{--    <section class="section-review p-t-115">--}}
-    {{--        <!-- - -->--}}
-    {{--        <div class="title-review t-center m-b-2">--}}
-    {{--				<span class="tit2 p-l-15 p-r-15">--}}
-    {{--					Customers Say--}}
-    {{--				</span>--}}
-
-    {{--            <h3 class="tit8 t-center p-l-20 p-r-15 p-t-3">--}}
-    {{--                Review--}}
-    {{--            </h3>--}}
-    {{--        </div>--}}
-
-    {{--        <!-- - -->--}}
-    {{--        <div class="wrap-slick3">--}}
-    {{--            <div class="slick3">--}}
-    {{--                <div class="item-slick3 item1-slick3">--}}
-    {{--                    <div class="wrap-content-slide3 p-b-50 p-t-50">--}}
-    {{--                        <div class="container">--}}
-    {{--                            <div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false"--}}
-    {{--                                 data-appear="zoomIn">--}}
-    {{--                                <img src="images/avatar-01.jpg" alt="IGM-AVATAR">--}}
-    {{--                            </div>--}}
-
-    {{--                            <div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">--}}
-    {{--                                <p class="t-center txt12 size15 m-l-r-auto">--}}
-    {{--                                    “ We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem,--}}
-    {{--                                    mattis in pre-tium nec, fermentum viverra dui ”--}}
-    {{--                                </p>--}}
-
-    {{--                                <div class="star-review fs-18 color0 flex-c-m m-t-12">--}}
-    {{--                                    <i class="fa fa-star" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                </div>--}}
-
-    {{--                                <div class="more-review txt4 t-center animated visible-false m-t-32"--}}
-    {{--                                     data-appear="fadeInUp">--}}
-    {{--                                    Marie Simmons ˗ New York--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-
-    {{--                <div class="item-slick3 item2-slick3">--}}
-    {{--                    <div class="wrap-content-slide3 p-b-50 p-t-50">--}}
-    {{--                        <div class="container">--}}
-    {{--                            <div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false"--}}
-    {{--                                 data-appear="zoomIn">--}}
-    {{--                                <img src="images/avatar-04.jpg" alt="IGM-AVATAR">--}}
-    {{--                            </div>--}}
-
-    {{--                            <div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">--}}
-    {{--                                <p class="t-center txt12 size15 m-l-r-auto">--}}
-    {{--                                    “ We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem,--}}
-    {{--                                    mattis in pre-tium nec, fermentum viverra dui ”--}}
-    {{--                                </p>--}}
-
-    {{--                                <div class="star-review fs-18 color0 flex-c-m m-t-12">--}}
-    {{--                                    <i class="fa fa-star" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                </div>--}}
-
-    {{--                                <div class="more-review txt4 t-center animated visible-false m-t-32"--}}
-    {{--                                     data-appear="fadeInUp">--}}
-    {{--                                    Marie Simmons ˗ New York--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-
-    {{--                <div class="item-slick3 item3-slick3">--}}
-    {{--                    <div class="wrap-content-slide3 p-b-50 p-t-50">--}}
-    {{--                        <div class="container">--}}
-    {{--                            <div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false"--}}
-    {{--                                 data-appear="zoomIn">--}}
-    {{--                                <img src="images/avatar-05.jpg" alt="IGM-AVATAR">--}}
-    {{--                            </div>--}}
-
-    {{--                            <div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">--}}
-    {{--                                <p class="t-center txt12 size15 m-l-r-auto">--}}
-    {{--                                    “ We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem,--}}
-    {{--                                    mattis in pre-tium nec, fermentum viverra dui ”--}}
-    {{--                                </p>--}}
-
-    {{--                                <div class="star-review fs-18 color0 flex-c-m m-t-12">--}}
-    {{--                                    <i class="fa fa-star" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                    <i class="fa fa-star p-l-1" aria-hidden="true"></i>--}}
-    {{--                                </div>--}}
-
-    {{--                                <div class="more-review txt4 t-center animated visible-false m-t-32"--}}
-    {{--                                     data-appear="fadeInUp">--}}
-    {{--                                    Marie Simmons ˗ New York--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-
-    {{--            </div>--}}
-
-    {{--            <div class="wrap-slick3-dots m-t-30"></div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
-
-
-    <!-- Video -->
     <section class="section-video parallax100" style="background-image: url(images/bg-cover-video-02.jpg);">
         <div class="content-video t-center p-t-225 p-b-250">
 				<span class="tit2 p-l-15 p-r-15">
@@ -577,7 +459,7 @@
                                 </p>
 
                                 <a href="{{ route('blog.show', ['blog' => $post->id]) }}" class="txt4">
-                                    Continue Reading
+                                    {{ __('blog.continue_reading') }}
                                     <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                                 </a>
                             </div>

@@ -56,14 +56,14 @@
 							<!-- - -->
 							<div class="text-blo4 p-t-33">
 								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">{{ $blog->title }}</a>
+									<span class="tit9">{{ $blog->title }}</span>
 								</h4>
-
-								<div class="txt32 flex-w p-b-24">
-									<span>
-										<span class="m-r-6 m-l-4">123</span>
-									</span>
-								</div>
+{{--                                    TODO: make views count--}}
+{{--								<div class="txt32 flex-w p-b-24">--}}
+{{--									<span>--}}
+{{--										<span class="m-r-6 m-l-4">123</span>--}}
+{{--									</span>--}}
+{{--								</div>--}}
 
 								<p>
 									{!! $blog->body !!}
@@ -75,5 +75,5 @@
 				</div>
 			</div>
 		</div>
-	</section>  
+	</section>
 </x-layout>

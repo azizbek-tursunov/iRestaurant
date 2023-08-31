@@ -99,4 +99,3 @@ class BlogResource extends Resource
         ];
     }
 }
-// TODO: goto index after create

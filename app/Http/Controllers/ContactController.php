@@ -9,9 +9,13 @@ class ContactController extends Controller
 {
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => ['required', 'min:3', 'max:255'],
+            'phone' => ['required', 'min:7', 'max:255'],
+            'message' => ['required'],
+        ]);
         Contact::create([
             'name' => $request->name,
-            'email' => $request->email,
             'phone' => $request->phone,
             'message' => $request->message
         ]);

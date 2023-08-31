@@ -15,14 +15,20 @@ class TimeSeeder extends Seeder
     {
         Time::create([
             'name' => 'Breakfast',
+            'name_ru' => 'Завтрак',
+            'name_uz' => 'Nonushta'
         ]);
 
         Time::create([
             'name' => 'Lunch',
+            'name_ru' => 'Обед',
+            'name_uz' => 'Tushlik'
         ]);
 
         Time::create([
             'name' => 'Dinner',
+            'name_ru' => 'Ужин',
+            'name_uz' => 'Kechki ovqat'
         ]);
     }
 }

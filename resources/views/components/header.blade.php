@@ -46,12 +46,11 @@
                     </nav>
                 </div>
 
-{{--                TODO: Add global varriables --}}
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
-                    <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram    m-l-21" aria-hidden="true"></i></a>
+                    @foreach($socials as $social)
+                        <a href="{{ $social->url }}"><i class="fa fa-{{ $social->name }} m-l-10" aria-hidden="true"></i></a>
+                    @endforeach
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                 </div>

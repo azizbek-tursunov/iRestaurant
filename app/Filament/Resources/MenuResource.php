@@ -3,15 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\MenuResource\Pages;
-use App\Filament\Resources\MenuResource\RelationManagers;
 use App\Models\Menu;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+
 
 class MenuResource extends Resource
 {
@@ -55,13 +53,13 @@ class MenuResource extends Resource
                         ->label("Изображение")
                         ->image()
                         ->required(),
-                    Forms\Components\Select::make('category')
-                        ->label("Категория")
+                    Forms\Components\Select::make('category_id')
                         ->relationship('category', 'name')
+                        ->label("Категория")
                         ->required(),
-                    Forms\Components\Select::make('time')
-                        ->label("Время приема")
-                        ->relationship('time', 'name'),
+                    Forms\Components\Select::make('time_id')
+                        ->relationship('time', 'name_ru')
+                        ->label("Время приема"),
                 ])->columnSpan(4)
 
             ])->columns(12);
@@ -72,7 +70,8 @@ class MenuResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('image')
-                ->label("Изображение"),
+                    ->size('100px')
+                    ->label("Изображение"),
                 Tables\Columns\TextColumn::make('name')
                     ->label("Название")
                     ->searchable(),
@@ -82,9 +81,9 @@ class MenuResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
                     ->label("Цена")
-                    ->money()
+                    ->money('SUM')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('categories.name')
+                Tables\Columns\TextColumn::make('category.name')
                     ->label("Категория")
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
@@ -122,3 +121,4 @@ class MenuResource extends Resource
         ];
     }
 }
+
