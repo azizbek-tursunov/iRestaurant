@@ -63,24 +63,32 @@ class ReservationResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('date')
+                    ->label("Дата")
                     ->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('time')
+                    ->label("Время")
                     ->time()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Имя")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone')
+                    ->label("Телефон")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('guests')
+                    ->label("Количество гостей")
                     ->numeric(),
                 Tables\Columns\IconColumn::make('isProvided')
+                    ->label("Предоставлен")
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Создано")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label("Обновлено")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
