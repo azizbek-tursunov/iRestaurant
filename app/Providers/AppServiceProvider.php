@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Gallery;
 use App\Models\SocialLink;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,10 +25,13 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFour();
 
-        $gallery = Gallery::latest()->paginate(12);
-        view()->share('gallery', $gallery);
+        if (! App::runningInConsole()) {
+            $gallery = Gallery::latest()->paginate(12);
+            view()->share('gallery', $gallery);
 
-        $socials = SocialLink::all();
-        view()->share('socials', $socials);
+            $socials = SocialLink::all();
+            view()->share('socials', $socials);
+        }
+        
     }
 }
