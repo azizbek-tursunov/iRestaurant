@@ -49,9 +49,9 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 // make nullable
 
-Route::get('/update-column', function () {
-    Schema::table('menus', function (Blueprint $table) {
-        $table->text('about')->nullable()->change();
-        $table->text('about_ru')->nullable()->change();
-    });
-});
+//Route::get('/update-column', function () {
+//    Schema::table('menus', function (Blueprint $table) {
+//        $table->text('about')->nullable()->change();
+//        $table->text('about_ru')->nullable()->change();
+//    });
+//});

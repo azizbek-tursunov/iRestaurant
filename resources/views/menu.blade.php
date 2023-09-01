@@ -23,11 +23,13 @@
                             </h3>
                             @foreach($category->menus as $meal)
                                 <!-- Item mainmenu -->
+
                                 <div class="item-mainmenu m-b-36">
                                     <div class="flex-w flex-b m-b-3">
-                                        <a href="#" class="name-item-mainmenu txt21">
+                                        <span class="name-item-mainmenu txt21">
                                             {{ $meal->name }}
-                                        </a>
+                                        </span>
+
 
                                         <div class="line-item-mainmenu bg3-pattern"></div>
 
@@ -35,10 +37,19 @@
                                             ${{ $meal->price }}
                                         </div>
                                     </div>
+                                    <div class="name-item-mainmenu txt12">
+                                        {{ $meal->name }}
+                                    </div>
+                                    @if(\Illuminate\Support\Facades\App::getLocale() == 'ru')
+                                        <span class="info-item-mainmenu txt23">
+                                            {{ $meal->about_ru }}
+                                        </span>
+                                    @else
+                                        <span class="info-item-mainmenu txt23">
+                                            {{ $meal->about }}
+                                         </span>
+                                    @endif
 
-                                    <span class="info-item-mainmenu txt23">
-                                    {{ $meal->about }}
-                                </span>
                                 </div>
                             @endforeach
                         </div>
