@@ -5,7 +5,10 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ReservationController;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +46,12 @@ Route::post('/reservation', [ReservationController::class, 'store'])->name('rese
 // Contact routes
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// make nullable
+
+Route::get('/update-column', function () {
+    Schema::table('menus', function (Blueprint $table) {
+        $table->text('about')->nullable()->change();
+        $table->text('about_ru')->nullable()->change();
+    });
+});

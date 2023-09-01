@@ -49,7 +49,7 @@
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
                     @foreach($socials as $social)
-                        <a href="{{ $social->url }}"><i class="fa fa-{{ $social->name }} m-l-10" aria-hidden="true"></i></a>
+                        <a href="{{ $social->url }}" target="_blank" ><i class="fa fa-{{ $social->name }} m-l-10" aria-hidden="true"></i></a>
                     @endforeach
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>

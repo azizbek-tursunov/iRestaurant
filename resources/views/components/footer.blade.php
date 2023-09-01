@@ -65,7 +65,7 @@
             <div class="flex-sb-m flex-w p-t-22 p-b-22">
                 <div class="p-t-5 p-b-5">
                     @foreach($socials as $social)
-                        <a href="{{ $social->url }}" class="fs-15 c-white"><i class="fa fa-{{ $social->name }} m-l-18" aria-hidden="true"></i></a>
+                        <a href="{{ $social->url }}" class="fs-15 c-white"  target="_blank" ><i class="fa fa-{{ $social->name }} m-l-18" aria-hidden="true"></i></a>
                     @endforeach
                 </div>
 

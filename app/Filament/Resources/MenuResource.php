@@ -31,16 +31,14 @@ class MenuResource extends Resource
                         ->maxLength(255),
                     Forms\Components\Textarea::make('about')
                         ->label("Описание")
-                        ->required()
-                        ->maxLength(255),
+                        ->maxLength(2048),
                     Forms\Components\TextInput::make('name_ru')
                         ->label("Название (RU)")
                         ->required()
                         ->maxLength(255),
                     Forms\Components\Textarea::make('about_ru')
                         ->label("Описание (RU)")
-                        ->required()
-                        ->maxLength(255),
+                        ->maxLength(2048),
                     Forms\Components\TextInput::make('price')
                         ->label("Цена")
                         ->required()
@@ -72,10 +70,10 @@ class MenuResource extends Resource
                 Tables\Columns\ImageColumn::make('image')
                     ->size('100px')
                     ->label("Изображение"),
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('name_ru')
                     ->label("Название")
                     ->searchable(),
-                Tables\Columns\TextColumn::make('about')
+                Tables\Columns\TextColumn::make('about_ru')
                     ->label("Описание")
                     ->wrap()
                     ->searchable(),
