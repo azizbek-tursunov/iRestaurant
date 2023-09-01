@@ -38,7 +38,7 @@
                                         </div>
                                     </div>
                                     <div class="name-item-mainmenu txt12">
-                                        {{ $meal->name }}
+                                        {{ $meal->name_ru }}
                                     </div>
                                     @if(\Illuminate\Support\Facades\App::getLocale() == 'ru')
                                         <span class="info-item-mainmenu txt23">
@@ -81,17 +81,30 @@
                                 <img src="/storage/{{ $meal->image }}" alt="IMG-MENU">
                             </div>
                             <div class="text-blo3 size21 flex-col-l-m">
-                                <a href="#" class="txt21 m-b-3">
-                                    {{ $meal->name }}
-                                </a>
-
-                                <span class="txt23">
-								{{ $meal->about }}
-							</span>
-
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'ru')
+                                    <span class="txt21 m-b-3">
+                                        {{ $meal->name_ru }}
+                                    </span>
+                                    <span class="txt12 m-b-3">
+                                        {{ $meal->name }}
+                                    </span>
+                                    <span class="txt23">
+                                        {{ $meal->about_ru }}
+                                    </span>
+                                @else
+                                    <span class="txt21 m-b-3">
+                                        {{ $meal->name }}
+                                    </span>
+                                    <span class="txt12 m-b-3">
+                                        {{ $meal->name_ru }}
+                                    </span>
+                                    <span class="txt23">
+                                        {{ $meal->about }}
+                                    </span>
+                                @endif
                                 <span class="txt22 m-t-20">
 								${{ $meal->price }}
-							</span>
+							    </span>
                             </div>
                         </div>
                     </div>
@@ -119,17 +132,32 @@
                                 <img src="/storage/{{ $meal->image }}" alt="IMG-MENU">
                             </div>
                             <div class="text-blo3 size21 flex-col-l-m">
-                                <a href="#" class="txt21 m-b-3">
-                                    {{ $meal->name }}
-                                </a>
 
-                                <span class="txt23">
-								{{ $meal->about }}
-							</span>
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'ru')
+                                    <span class="txt21 m-b-3">
+                                        {{ $meal->name_ru }}
+                                    </span>
+                                    <span class="txt12 m-b-3">
+                                        {{ $meal->name }}
+                                    </span>
+                                    <span class="txt23">
+                                        {{ $meal->about_ru }}
+                                    </span>
+                                @else
+                                    <span class="txt21 m-b-3">
+                                        {{ $meal->name }}
+                                    </span>
+                                    <span class="txt12 m-b-3">
+                                        {{ $meal->name_ru }}
+                                    </span>
+                                    <span class="txt23">
+                                        {{ $meal->about }}
+                                    </span>
+                                @endif
 
                                 <span class="txt22 m-t-20">
 								${{ $meal->price }}
-							</span>
+							    </span>
                             </div>
                         </div>
                     </div>
