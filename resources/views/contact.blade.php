@@ -10,14 +10,14 @@
         </h2>
     </section>
 
-
     <!-- Contact form -->
     <section class="section-contact bg1-pattern p-t-90 p-b-113">
         <!-- Map -->
         <div class="container">
             <div class="map bo8 bo-rad-10 of-hidden">
-                <div class="contact-map size37" id="google_map" data-map-x="40.704644" data-map-y="-74.011987"
-                     data-pin="/images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div>
+                <div>
+                    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1164&amp;height=400&amp;hl=en&amp;q=istanbul asylum of&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://gachanymph.com/">Gacha Nymph Download</a></div><style>.mapouter{position:relative;text-align:right;width:1164px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:1164px;height:400px;}.gmap_iframe {width:1164px!important;height:400px!important;}</style></div>
+                </div>
             </div>
         </div>
 
@@ -36,7 +36,8 @@
 						</span>
 
                         <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="{{ __('home.name') }}"
+                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name"
+                                   placeholder="{{ __('home.name') }}"
                                    required>
                         </div>
                     </div>
@@ -48,7 +49,8 @@
 						</span>
 
                         <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="{{ __('home.phone') }}">
+                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" required
+                                   placeholder="{{ __('home.phone') }}">
                         </div>
                     </div>
 

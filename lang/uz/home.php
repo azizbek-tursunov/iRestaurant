@@ -33,4 +33,5 @@ return [
     'our_video' => 'Bizning video',
     'latest_news' => 'So\'nggi yangiliklar',
     'blog' => 'Blog',
+    'choose' => 'Tanlash',
 ];

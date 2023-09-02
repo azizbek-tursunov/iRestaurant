@@ -33,4 +33,5 @@ return [
     'our_video' => 'Our Video',
     'latest_news' => 'Latest News',
     'blog' => 'Blog',
+    'choose' => 'Choose',
 ];

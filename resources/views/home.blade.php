@@ -297,6 +297,14 @@
                         </h3>
                     </div>
 
+                    @error('date')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
+
+                    @error('time')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
+
                     <form action="{{ route('reservation.store') }}" class="wrap-form-booking" method="POST">
                         @csrf
                         <div class="row">
@@ -320,6 +328,7 @@
                                 <div class="wrap-inputtime size12 bo2 bo-rad-10 m-t-3 m-b-23">
                                     <!-- Select2 -->
                                     <select class="selection-1" name="time">
+                                        <option value="" disabled selected hidden>{{ __('home.choose') }}</option>
                                         <option>9:00</option>
                                         <option>9:30</option>
                                         <option>10:00</option>
@@ -437,8 +446,9 @@
                         <!-- Block1 -->
                         <div class="blo1">
                             <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                <a href="{{ route('blog.show', ['blog' => $post->id]) }}"><img src="/storage/{{ $post->image }}"
-                                                                                               alt="IMG-INTRO"></a>
+                                <a href="{{ route('blog.show', ['blog' => $post->id]) }}"><img
+                                        src="/storage/{{ $post->image }}"
+                                        alt="IMG-INTRO"></a>
                                 @php
                                     $carbonDatetime = \Carbon\Carbon::parse($post->created_at);
                                     $formattedDate = $carbonDatetime->format('d F Y');
