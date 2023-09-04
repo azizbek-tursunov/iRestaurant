@@ -2,10 +2,10 @@
 
 return [
     'welcome' => 'Welcome',
-    'welcome_text' => 'Welcome to our Istanbul Restaurant',
+    'welcome_text' => 'Welcome to our Turkish Restaurant',
     'look_menu' => 'Look menu',
     'welcome_to' => 'Welcome to',
-    'istanbul_restaurant' => 'Istanbul Restaurant',
+    'istanbul_restaurant' => 'TUrkish Restaurant',
     'turkish_restaurant' => 'Turkish Restaurant',
     'about' => 'Discover the essence of Turkish cuisine at our restaurant. Indulge in authentic flavors and a rich cultural experience that will transport you to Turkey.',
     'our_story' => 'Our Story',

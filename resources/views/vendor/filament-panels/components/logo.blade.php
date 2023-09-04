@@ -1,1 +1,1 @@
-<img src="{{ asset('/images/icons/logoadmin.png') }}" class="h-16" alt="Site logo">
+<img src="{{ asset('/images/icons/logo2.png') }}" class="h-16" alt="Site logo">

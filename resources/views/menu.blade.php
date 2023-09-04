@@ -23,7 +23,6 @@
                             </h3>
                             @foreach($category->menus as $meal)
                                 <!-- Item mainmenu -->
-
                                 <div class="item-mainmenu m-b-36">
                                     <div class="flex-w flex-b m-b-3">
                                         <span class="name-item-mainmenu txt21">

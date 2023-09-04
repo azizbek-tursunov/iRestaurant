@@ -11,7 +11,7 @@ return [
     'blog' => 'Blog',
     // footer
     'contact_us' => 'Contact us',
-    'address' => 'A.Irmatov, Namangan Region',
+    'address' => 'Namangan Region',
     'opening_hours' => 'Opening hours',
     'everyday' => 'Everyday',
     'gallery' => 'Gallery',

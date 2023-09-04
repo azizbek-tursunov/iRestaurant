@@ -2,10 +2,10 @@
 
 return [
     'welcome' => 'Xush kelibsiz',
-    'welcome_text' => 'Istanbul restoraniga xush kelibsiz',
+    'welcome_text' => 'Bizning restoranga xush kelibsiz',
     'look_menu' => 'Menyu',
     'welcome_to' => 'Xush kelibsiz',
-    'istanbul_restaurant' => 'Istanbul restorani',
+    'istanbul_restaurant' => 'Turk restorani',
     'turkish_restaurant' => 'Turk restorani',
     'about' => 'Bizning restoranda turk oshxonasining mohiyatini bilib oling. Sizni Turkiyaga olib boradigan haqiqiy lazzatlar va boy madaniy tajribaga ega bo\'ling.',
     'our_story' => 'Bizning tariximiz',

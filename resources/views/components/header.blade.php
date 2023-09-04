@@ -7,7 +7,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a href="{{ route('home') }}">
-                        <img src="/images/icons/sitelogo1.png" alt="IMG-LOGO">
+                        <img src="/images/icons/logo.png" alt="IMG-LOGO">
                     </a>
                 </div>
 
