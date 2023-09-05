@@ -108,7 +108,10 @@
         <div class="wrap-video-mo-01">
             <div class="w-full wrap-pic-w op-0-0"><img src="/images/icons/video-16-9.jpg" alt="IMG"></div>
             <div class="video-mo-01">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YuWR4VCMDxw?si=t_fMgVwsvWemOt0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <video controls>
+                    <source src="/videos/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
@@ -152,29 +155,6 @@
 
 </script>
 <!--===============================================================================================-->
-
- <script type="text/javascript">
-        function initMap() {
-          const myLatLng = { lat: 22.2734719, lng: 70.7512559 };
-          const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 5,
-            center: myLatLng,
-          });
-
-          new google.maps.Marker({
-            position: myLatLng,
-            map,
-            title: "Istanbul restaurant!",
-          });
-        }
-
-        window.initMap = initMap;
-    </script>
-
-    <script type="text/javascript"
-        src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap" ></script>
-
-
 <script src="/js/main.js"></script>
 
 </body>

@@ -27,8 +27,8 @@
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 							<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
                                   data-appear="rollIn">
-								{{ __('home.welcome_to') }}
-							</span>
+                                {{ __('home.welcome_to') }}
+                            </span>
 
                         <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
                             data-appear="lightSpeedIn">
@@ -69,8 +69,7 @@
 
             <div class="wrap-slick1-dots"></div>
         </div>
-    </section>
-
+    </section>   
     <!-- Welcome -->
     <section class="section-welcome bg1-pattern p-t-120 p-b-105">
         <div class="container">

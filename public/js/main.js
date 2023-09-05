@@ -90,23 +90,24 @@
     });
 
 
-    /*[ Play video 01]
+        /*[ Play video 01]
     ===========================================================*/
-    var srcOld = $('.video-mo-01').children('iframe').attr('src');
+    var video = $('.video-mo-01').find('video')[0];
+    var videoSrc = video.querySelector('source').getAttribute('src');
 
-    $('[data-target="#modal-video-01"]').on('click',function(){
-        $('.video-mo-01').children('iframe')[0].src += "&autoplay=1";
+    $('[data-target="#modal-video-01"]').on('click', function () {
+        video.play();
 
-        setTimeout(function(){
-            $('.video-mo-01').css('opacity','1');
-        },300);      
+        setTimeout(function () {
+            $('.video-mo-01').css('opacity', '1');
+        }, 300);
     });
 
-    $('[data-dismiss="modal"]').on('click',function(){
-        $('.video-mo-01').children('iframe')[0].src = srcOld;
-        $('.video-mo-01').css('opacity','0');
+    $('[data-dismiss="modal"]').on('click', function () {
+        video.pause();
+        video.currentTime = 0;
+        $('.video-mo-01').css('opacity', '0');
     });
-    
 
     /*[ Fixed Header ]
     ===========================================================*/
