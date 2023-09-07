@@ -10,7 +10,7 @@ return [
     'about' => 'Bizning restoranda turk oshxonasining mohiyatini bilib oling. Sizni Turkiyaga olib boradigan haqiqiy lazzatlar va boy madaniy tajribaga ega bo\'ling.',
     'our_story' => 'Bizning tariximiz',
     'discover' => 'Kashf eting',
-    'romantic' => 'Romantik restoran',
+    'romantic' => 'Romantik',
     'romantic_text' => 'Biz Namangan viloyatiga 20 yildan ortiq vaqt davomida xizmat ko\'rsatib kelayotgan oilaviy restoranmiz. Biz mijozlarimizga shahardagi eng yaxshi turk taomlari bilan xizmat qilishdan faxrlanamiz. Bizning maqsadimiz sizni Turkiyada bo\'lgandek his qiladigan haqiqiy tajriba bilan ta\'minlashdir.',
     'delicious_food' => 'Lazzatli taomlar',
     'delicious_text' => "Nonushta, tushlik va kechki ovqat uchun turli xil mazali taomlarni taklif etamiz. Qaysi kayfiyatda bo'lsangiz, uni shu yerda topishingiz mumkin! Ovqatlanish uchun to'xtang va taomlarimizga baho bering.",
@@ -34,4 +34,6 @@ return [
     'latest_news' => 'So\'nggi yangiliklar',
     'blog' => 'Blog',
     'choose' => 'Tanlash',
+    'our' => 'Bizning',
+    'restaurant' => 'Restoran',
 ];

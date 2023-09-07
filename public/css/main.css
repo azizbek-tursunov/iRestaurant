@@ -1625,3 +1625,28 @@ body {padding-right: 0px !important;}
   border-radius: 10px;
   background-color: #ec1d25;
 }
+
+
+/* styles.css */
+/* Define Flexbox container for the main menu sections */
+.section-mainmenu {
+  display: flex;
+  justify-content: space-between; /* Distribute space between Categories and Meals columns */
+  align-items: flex-start; /* Align items at the top of the container */
+}
+
+/* Style the Categories column */
+.col-md-3 {
+  flex: 0 0 200px; /* Fixed width for Categories column */
+  padding: 15px; /* Add padding as needed */
+  background-color: #f0f0f0; /* Set background color */
+  overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Style the Meals column */
+.col-md-9 {
+  flex: 1; /* Flexible width for Meals column */
+  padding: 15px; /* Add padding as needed */
+}
+
+/* Additional styling as needed for category links, meals, etc. */

@@ -13,51 +13,62 @@
 
     <!-- Main menu -->
     <section class="section-mainmenu p-t-110 p-b-70 bg1-pattern">
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 p-r-35 p-r-15-lg m-l-r-auto">
+                <!-- Fixed Categories Column -->
+                <div class="wrap-item-mainmenu p-b-22">
+                    <h3 class="tit-mainmenu tit10 p-b-25">
+                        {{ __('menu.categories')}}
+                    </h3>
+                    <ul>
+                        @foreach($categoriesWithMeals as $category)
+                            <li><a href="#{{ $category->name }}">{{ $category->name }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 col-lg-9 p-r-35 p-r-15-lg m-l-r-auto">
+                <!-- Flexible Meals Column -->
                 @foreach($categoriesWithMeals as $category)
-                    <div class="col-md-10 col-lg-6 p-r-35 p-r-15-lg m-l-r-auto">
-                        <div class="wrap-item-mainmenu p-b-22">
-                            <h3 class="tit-mainmenu tit10 p-b-25">
-                                {{ $category->name }}
-                            </h3>
-                            @foreach($category->menus as $meal)
-                                <!-- Item mainmenu -->
-                                <div class="item-mainmenu m-b-36">
-                                    <div class="flex-w flex-b m-b-3">
-                                        <span class="name-item-mainmenu txt21">
-                                            {{ $meal->name }}
-                                        </span>
+                    <div id="{{ $category->name }}" class="wrap-item-mainmenu p-b-22">
+                        <h3 class="tit-mainmenu tit10 p-b-25">
+                            {{ $category->name }}
+                        </h3>
+                        @foreach($category->menus as $meal)
+                            <!-- Item mainmenu -->
+                            <div class="item-mainmenu m-b-36">
+                                <div class="flex-w flex-b m-b-3">
+                                    <span class="name-item-mainmenu txt21">
+                                        {{ $meal->name }}
+                                    </span>                                    
+                                    <div class="line-item-mainmenu bg3-pattern"></div>
 
-
-                                        <div class="line-item-mainmenu bg3-pattern"></div>
-
-                                        <div class="price-item-mainmenu txt22">
-                                            ${{ $meal->price }}
-                                        </div>
+                                    <div class="price-item-mainmenu txt22">
+                                        ${{ $meal->price }}
                                     </div>
-                                    <div class="name-item-mainmenu txt12">
-                                        {{ $meal->name_ru }}
-                                    </div>
-                                    @if(\Illuminate\Support\Facades\App::getLocale() == 'ru')
-                                        <span class="info-item-mainmenu txt23">
-                                            {{ $meal->about_ru }}
-                                        </span>
-                                    @else
-                                        <span class="info-item-mainmenu txt23">
-                                            {{ $meal->about }}
-                                         </span>
-                                    @endif
-
                                 </div>
-                            @endforeach
-                        </div>
-
+                                <div class="name-item-mainmenu txt12">
+                                    {{ $meal->name_ru }}
+                                </div>
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'ru')
+                                    <span class="info-item-mainmenu txt23">
+                                        {{ $meal->about_ru }}
+                                    </span>
+                                @else
+                                    <span class="info-item-mainmenu txt23">
+                                        {{ $meal->about }}
+                                    </span>
+                                @endif
+                            </div>
+                        @endforeach
                     </div>
                 @endforeach
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
     <!-- Lunch -->
@@ -164,6 +175,5 @@
             </div>
         </div>
     </section>
-
 
 </x-layout>

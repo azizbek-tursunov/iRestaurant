@@ -86,12 +86,12 @@
             <div class="col-md-6 p-t-45 p-b-30">
                 <div class="wrap-text-romantic t-center">
                     <span class="tit2 t-center">
-                        {{ __('about_us.romantic') }}
+                        {{ __('home.romantic') }}
                     </span>
 
-                    <h3 class="tit3 t-center m-b-35 m-t-5">
-                        {{ __('about_us.restaurant') }}
-                    </h3>
+                        <h3 class="tit3 t-center m-b-35 m-t-5">
+                            {{ __('home.restaurant') }}
+                        </h3>
 
                     <p class="t-center m-b-22 size3 m-l-r-auto">
                         Fusce iaculis, quam quis volutpat cursus, tellus quam varius eros, in euismod lorem nisl in ante. Maecenas imperdiet vulputate dui sit amet vestibulum. Nulla quis suscipit nisl.
@@ -112,12 +112,9 @@
 <!-- Chef -->
 <section class="section-chef bgwhite p-t-115 p-b-95">
     <div class="container t-center">
-        <span class="tit2 t-center">
-            {{ __('about_us.our') }}
-        </span>
 
         <h3 class="tit5 t-center m-b-50 m-t-5">
-            {{ __('about_us.team') }}
+            {{ __('about_us.our_team') }}
         </h3>
 
         <div class="row">

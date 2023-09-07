@@ -34,4 +34,6 @@ return [
     'latest_news' => 'Latest News',
     'blog' => 'Blog',
     'choose' => 'Choose',
+    'our' => 'Our',
+    'restaurant' => 'Restaurant',
 ];

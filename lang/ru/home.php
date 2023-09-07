@@ -23,7 +23,7 @@ return [
     'starters' => 'Закуска',
     'desserts' => 'Десерты',
     'reservation' => 'Бронирование',
-    'book_table' => 'Забронировать столик',
+    'book_table' => 'столик',
     'date' => 'Дата',
     'time' => 'Время',
     'guest' => 'Гость',
@@ -34,4 +34,6 @@ return [
     'latest_news' => 'Последние новости',
     'blog' => 'Блог',
     'choose' => 'Выбрать',
+    'our' => 'Наш',
+    'restaurant' => 'Ресторан',
 ];

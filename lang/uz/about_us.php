@@ -10,4 +10,5 @@ return [
     'team' => 'Jamoa',
     'romantic' => 'Romantik',
     'restaurant' => 'Restorant',
+    'our_team' => 'Bizning jamoa',
 ];

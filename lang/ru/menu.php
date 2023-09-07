@@ -5,4 +5,5 @@ return [
     'our_menu' => 'Наше меню',
     'lunch' => 'Обед',
     'dinner' => 'Ужин',
+    'categories' => 'Категории',
 ];
